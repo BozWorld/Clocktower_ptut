@@ -20,3 +20,7 @@ mono_crash.*.json
 # End of https://www.toptal.com/developers/gitignore/api/godot
 .godot/uid_cache.bin
 >>>>>>> Stashed changes
+.godot/editor/filesystem_cache8
+.godot/uid_cache.bin
+script_templates/ink_template.gd
+script_templates/ink_template_signals.gd
