@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyaenfybkuaso"]
+
+[ext_resource type="Script" path="res://scences/Ink_tuto/InkManager.gd" id="1_yonqo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gniyj"]
+line_spacing = 9.0
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="InkManager" type="HBoxContainer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = -224.0
+offset_right = -42.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_yonqo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 31.0
+offset_right = -27.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ezfzefzefzef
+zedzefzefzef
+zefzefzefzefzef"
+label_settings = SubResource("LabelSettings_gniyj")
+autowrap_mode = 1
