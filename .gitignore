@@ -1,6 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/godot
-# Edit at https://www.toptal.com/developers/gitignore?templates=godot
-
 ### Godot ###
 # Godot 4+ specific ignores
 .godot/
@@ -19,3 +16,5 @@ data_*/
 mono_crash.*.json
 
 # End of https://www.toptal.com/developers/gitignore/api/godot
+script_templates/ink_template.gd
+script_templates/ink_template_signals.gd
