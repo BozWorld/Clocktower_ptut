@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyaenfybkuaso"]
 
-[ext_resource type="Script" path="res://scences/Ink_tuto/InkManager.gd" id="1_yonqo"]
+[ext_resource type="Script" path="res://Script/IA/InkManager.gd" id="1_yonqo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gniyj"]
 line_spacing = 9.0

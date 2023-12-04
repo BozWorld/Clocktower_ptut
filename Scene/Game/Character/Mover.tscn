@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmf22ws2xxvrj"]
+
+[ext_resource type="Script" path="res://MoverObject.gd" id="1_kjwos"]
+[ext_resource type="Texture2D" uid="uid://bkoktk7cuy6u4" path="res://Assets/Visuel/raw/icon.svg" id="2_iv6kd"]
+
+[node name="Obj" type="Node2D" node_paths=PackedStringArray("movetimer", "dirLine")]
+position = Vector2(0, 264)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_kjwos")
+movetimer = NodePath("CanMoveTimer")
+dirLine = NodePath("Line2D")
+
+[node name="ObjSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_iv6kd")
+
+[node name="CanMoveTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-64, -832)
+scale = Vector2(2, 2)
+points = PackedVector2Array(32, 160, 96, 160)
+
+[connection signal="timeout" from="CanMoveTimer" to="." method="_on_can_move_timer_timeout"]
