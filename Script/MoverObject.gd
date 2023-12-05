@@ -1,40 +1,16 @@
-extends Node2D
+extends CharacterBody2D
 
+var run_speed = 30.0
+var attacks = ["attack1", "attack2"]
+@onready var animationplayer = $AnimationPlayer
+@onready var animatedsprite = $AnimatedSprite2D
 
-var speed : float = 100
-var canMove: bool = true
-var move: bool = false
-var velocity: Vector2  = Vector2.ZERO
-var goto: Vector2 = Vector2.ZERO
-@export var movetimer: Timer
-@export var dirLine: Line2D
-
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			if canMove:
-				canMove = false
-				goto = event.position
-				move = true
-				movetimer.start()
-
+func _ready():
+	animatedsprite.play("idle")
 
 func _process(delta: float) -> void:
-	move_to(goto,delta)
-	position += velocity * delta
-
-func move_to(v1:Vector2,delta: float) :
-	if !move:
-		return
-	else:
-		var dir = v1 - position
-		var dirto = dir.normalized()
-		print(dir)
-		if dir.length() <= 5:
-			move = false
-			velocity = Vector2.ZERO
-			position = v1
-		velocity += speed * delta * dirto
-	
-func _on_can_move_timer_timeout():
-	canMove = true
+	if Input.is_action_just_pressed("move right"):
+		animationplayer.play("walk")
+		velocity += Vector2(run_speed * delta,0)
+		position = velocity * delta
+		move_and_slide()

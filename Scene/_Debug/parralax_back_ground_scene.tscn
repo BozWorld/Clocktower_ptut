@@ -4,10 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://8sib1tmp1c3p" path="res://Assets/Visuel/raw/Parallax/middleground.png" id="2_hhy7o"]
 
 [node name="ParralaxBackGroundScene" type="Node2D"]
-visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
