@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpkh1sm6oip4t"]
+
+[ext_resource type="Script" path="res://Script/handler.gd" id="1_q1v05"]
+[ext_resource type="PackedScene" uid="uid://bmf22ws2xxvrj" path="res://Scene/_Debug/Mover.tscn" id="2_ngykd"]
+
+[node name="MovementScene" type="Node2D"]
+script = ExtResource("1_q1v05")
+
+[node name="DistanceLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 40, 0)
+
+[node name="Obj" parent="." node_paths=PackedStringArray("dirLine") instance=ExtResource("2_ngykd")]
+position = Vector2(32, 192)
+dirLine = NodePath("../DistanceLine")
