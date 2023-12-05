@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmf22ws2xxvrj"]
+
+[ext_resource type="Script" path="res://Script/MoverObject.gd" id="1_kjwos"]
+[ext_resource type="Texture2D" uid="uid://b41tt4it4bla7" path="res://Assets/Visuel/raw/Character Idle 48x48.png" id="2_santc"]
+
+[sub_resource type="Animation" id="Animation_o5iye"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ghugs"]
+resource_name = "idle"
+length = 10.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0jk5x"]
+_data = {
+"RESET": SubResource("Animation_o5iye"),
+"idle": SubResource("Animation_ghugs")
+}
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sxie7"]
+
+[node name="Obj" type="Node2D" node_paths=PackedStringArray("dirLine")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_kjwos")
+dirLine = NodePath("")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_santc")
+hframes = 10
+frame = 6
+
+[node name="CanMoveTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+speed_scale = 15.0
+libraries = {
+"": SubResource("AnimationLibrary_0jk5x")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_sxie7")
+
+[connection signal="timeout" from="CanMoveTimer" to="." method="_on_can_move_timer_timeout"]

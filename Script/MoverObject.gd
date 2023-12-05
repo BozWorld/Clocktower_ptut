@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var speed : float = 5
+var speed : float = 100
 var canMove: bool = true
 var move: bool = false
 var velocity: Vector2  = Vector2.ZERO
@@ -20,10 +20,8 @@ func _input(event):
 
 
 func _process(delta: float) -> void:
-	dirLine.get
 	move_to(goto,delta)
 	position += velocity * delta
-	var test = 0
 
 func move_to(v1:Vector2,delta: float) :
 	if !move:
@@ -32,7 +30,7 @@ func move_to(v1:Vector2,delta: float) :
 		var dir = v1 - position
 		var dirto = dir.normalized()
 		print(dir)
-		if dir.length() <= 0:
+		if dir.length() <= 5:
 			move = false
 			velocity = Vector2.ZERO
 			position = v1
