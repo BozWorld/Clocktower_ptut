@@ -9,6 +9,9 @@
 [node name="DistanceLine" type="Line2D" parent="."]
 points = PackedVector2Array(0, 0, 40, 0)
 
+[node name="Character" parent="." instance=ExtResource("4_o7op6")]
+position = Vector2(32, 424)
+
 [node name="TileMap" parent="." instance=ExtResource("3_5rsbw")]
 
 [node name="ParralaxBackGroundScene" parent="." instance=ExtResource("4_t4kkf")]
@@ -17,6 +20,3 @@ points = PackedVector2Array(0, 0, 40, 0)
 visible = false
 offset_right = 504.0
 offset_bottom = 504.0
-
-[node name="Character" parent="." instance=ExtResource("4_o7op6")]
-position = Vector2(32, 424)
