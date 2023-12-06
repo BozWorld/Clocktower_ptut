@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://da4hvshmdeaxd"]
+[gd_scene load_steps=21 format=3 uid="uid://da4hvshmdeaxd"]
 
 [ext_resource type="Script" path="res://Script/MoverObject.gd" id="1_l2r86"]
 [ext_resource type="Texture2D" uid="uid://b2wkxxuomlefy" path="res://Assets/Visuel/animation/player/hat-man-idle.png" id="2_uiud2"]
@@ -236,6 +236,9 @@ _data = {
 "walk": SubResource("Animation_o3237")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uatk"]
+size = Vector2(39.6667, 48.6667)
+
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 collision_mask = 8
@@ -266,3 +269,14 @@ speed_scale = 6.0
 libraries = {
 "": SubResource("AnimationLibrary_q5cxc")
 }
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+position = Vector2(9.83333, 4.33333)
+shape = SubResource("RectangleShape2D_4uatk")
+debug_color = Color(0.976471, 0, 0.423529, 0.419608)
+
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_enemy_detector_area_entered"]
