@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8stv4nspei0l"
-path="res://.godot/imported/idle0008.png-7f7fbb10cd5e4258bfd42fa45fc4eb37.ctex"
+uid="uid://b2wkxxuomlefy"
+path="res://.godot/imported/hat-man-idle.png-a90512c0e7cd03fc53ce179e5692337b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuel/animation/Idle/idle0008.png"
-dest_files=["res://.godot/imported/idle0008.png-7f7fbb10cd5e4258bfd42fa45fc4eb37.ctex"]
+source_file="res://Assets/Visuel/animation/player/hat-man-idle.png"
+dest_files=["res://.godot/imported/hat-man-idle.png-a90512c0e7cd03fc53ce179e5692337b.ctex"]
 
 [params]
 
