@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://8gher35fkqne"]
+
+[ext_resource type="Texture2D" uid="uid://b8wtuvvajhwt" path="res://Assets/Visuel/raw/img_test_background.png" id="1_3qs2c"]
+[ext_resource type="Script" path="res://Script/cursor_controller_script.gd" id="1_v57ab"]
+[ext_resource type="PackedScene" uid="uid://dyaenfybkuaso" path="res://Scene/Game/Ink_tuto/InkManager.tscn" id="4_ilk6t"]
+[ext_resource type="PackedScene" uid="uid://bkcwv46rfpitv" path="res://Scene/Game/Level/main_scene.tscn" id="5_c7mvc"]
+[ext_resource type="Script" path="res://Script/test_sceneHandler_script.gd" id="6_o3e5v"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_v57ab")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_3qs2c")
+
+[node name="WorldSceneHandler" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("6_o3e5v")
+
+[node name="MainScene" parent="WorldSceneHandler" instance=ExtResource("5_c7mvc")]
+visibility_layer = 129
+position = Vector2(-450, 100)
+
+[node name="InkManager" parent="." instance=ExtResource("4_ilk6t")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+offset_left = 411.0
+offset_top = -364.0
+offset_right = -411.0
+offset_bottom = -131.0
+grow_vertical = 0

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi3qu1i2t1iwr"]
+
+[ext_resource type="Texture2D" uid="uid://bkoktk7cuy6u4" path="res://Assets/Visuel/raw/icon.svg" id="1_k2161"]
+[ext_resource type="Texture2D" uid="uid://cpeduppjocy6y" path="res://Assets/Visuel/raw/img_test_txtbox.png" id="1_p0wmh"]
+
+[node name="TestRoom_scene" type="TextureRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.0
+offset_top = -289.0
+offset_right = 508.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_p0wmh")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -51.0
+offset_right = 159.5
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k2161")
+expand_mode = 1
+stretch_mode = 5

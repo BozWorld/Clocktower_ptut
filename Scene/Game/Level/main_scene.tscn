@@ -1,3 +1,81 @@
-[gd_scene format=3 uid="uid://bkcwv46rfpitv"]
+[gd_scene load_steps=8 format=3 uid="uid://bkcwv46rfpitv"]
+
+[ext_resource type="Script" path="res://Script/testscene_script.gd" id="1_3kyf0"]
+[ext_resource type="Texture2D" uid="uid://bkoktk7cuy6u4" path="res://Assets/Visuel/raw/icon.svg" id="1_dp1vs"]
+[ext_resource type="Script" path="res://Script/testNPC_scene.gd" id="2_4e76e"]
+[ext_resource type="Texture2D" uid="uid://b8wtuvvajhwt" path="res://Assets/Visuel/raw/img_test_background.png" id="4_sjf2o"]
+[ext_resource type="Script" path="res://Scene/Game/Level/test_door_script.gd" id="5_dqnll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5cmn"]
+size = Vector2(108, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcqif"]
+size = Vector2(1848.23, 1070.79)
 
 [node name="MainScene" type="Node2D"]
+script = ExtResource("1_3kyf0")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 630.0
+offset_bottom = 512.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(1000, 532)
+render_target_update_mode = 4
+
+[node name="NPC" type="Area2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(400, 200)
+script = ExtResource("2_4e76e")
+knot_name = "salut"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/NPC"]
+shape = SubResource("RectangleShape2D_e5cmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/NPC"]
+texture = ExtResource("1_dp1vs")
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport/NPC"]
+visible = false
+
+[node name="NPC2" type="Area2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(800, 400)
+script = ExtResource("2_4e76e")
+knot_name = "NPC"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/NPC2"]
+shape = SubResource("RectangleShape2D_e5cmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/NPC2"]
+texture = ExtResource("1_dp1vs")
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport/NPC2"]
+visible = false
+
+[node name="door" type="Sprite2D" parent="."]
+modulate = Color(0.745098, 0.0588235, 0, 1)
+position = Vector2(54, 375)
+scale = Vector2(0.0416615, 0.17744)
+texture = ExtResource("4_sjf2o")
+script = ExtResource("5_dqnll")
+
+[node name="Area2D" type="Area2D" parent="door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/Area2D"]
+position = Vector2(36.0043, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_dcqif")
+
+[connection signal="clicked" from="SubViewportContainer/SubViewport/NPC" to="." method="_on_npc_clicked"]
+[connection signal="input_event" from="SubViewportContainer/SubViewport/NPC" to="." method="_on_npc_input_event"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/NPC" to="." method="_on_npc_mouse_entered"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/NPC" to="SubViewportContainer/SubViewport/NPC" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SubViewportContainer/SubViewport/NPC" to="SubViewportContainer/SubViewport/NPC" method="_on_mouse_exited"]
+[connection signal="clicked" from="SubViewportContainer/SubViewport/NPC2" to="." method="_on_npc_clicked"]
+[connection signal="input_event" from="SubViewportContainer/SubViewport/NPC2" to="." method="_on_npc_input_event"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/NPC2" to="." method="_on_npc_mouse_entered"]
+[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/NPC2" to="SubViewportContainer/SubViewport/NPC2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SubViewportContainer/SubViewport/NPC2" to="SubViewportContainer/SubViewport/NPC2" method="_on_mouse_exited"]
