@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dph22j7xcyxmj"
-path="res://.godot/imported/hat-man-walk.png-67849451639c0307731a652795612510.ctex"
+uid="uid://df4mrdqt4aj2x"
+path="res://.godot/imported/idle0006.png-01353aae28c19cf6b53c4993ac44c640.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuel/animation/hat-man-walk.png"
-dest_files=["res://.godot/imported/hat-man-walk.png-67849451639c0307731a652795612510.ctex"]
+source_file="res://Assets/Visuel/animation/player/Idle/idle0006.png"
+dest_files=["res://.godot/imported/idle0006.png-01353aae28c19cf6b53c4993ac44c640.ctex"]
 
 [params]
 
