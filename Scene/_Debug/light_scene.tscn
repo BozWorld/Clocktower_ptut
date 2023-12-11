@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://ducuirrv8qst4"]
+
+[ext_resource type="PackedScene" uid="uid://brys1xqdolai6" path="res://Scene/_Debug/tile_map2.tscn" id="1_jg43i"]
+[ext_resource type="Texture2D" uid="uid://84xmdxmgy8mp" path="res://Assets/Visuel/raw/2d_lights_and_shadows_neutral_point_light.png" id="2_3wbhq"]
+[ext_resource type="PackedScene" uid="uid://cwsv3xqq3q6q8" path="res://Scene/enemy/enemy.tscn" id="3_rkpbp"]
+
+[sub_resource type="Animation" id="Animation_5125x"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_6etct"]
+resource_name = "moving_light"
+length = 9.0
+loop_mode = 2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1o8st"]
+_data = {
+"RESET": SubResource("Animation_5125x"),
+"moving_light": SubResource("Animation_6etct")
+}
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xcc0v"]
+polygon = PackedVector2Array(-15, -13, 6, -20.3333, 4.66667, -22.3333, -16.6667, -15.6667)
+
+[node name="LightScene" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1o8st")
+}
+
+[node name="TileMap" parent="." instance=ExtResource("1_jg43i")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(493, 284)
+color = Color(0.635294, 0.431373, 0.709804, 1)
+energy = 9.68
+shadow_enabled = true
+texture = ExtResource("2_3wbhq")
+texture_scale = 1.9
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.494118, 0.121569, 0.137255, 1)
+
+[node name="Enemy" parent="." instance=ExtResource("3_rkpbp")]
+position = Vector2(485, 378)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Enemy"]
+occluder = SubResource("OccluderPolygon2D_xcc0v")

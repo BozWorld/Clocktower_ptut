@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpkh1sm6oip4t"]
+
+[ext_resource type="Script" path="res://Scene/_Debug/movement_scene.gd" id="1_et1qe"]
+[ext_resource type="PackedScene" uid="uid://dh3ehp5uukmyr" path="res://Scene/_Debug/tile_map.tscn" id="3_5rsbw"]
+[ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="4_o7op6"]
+[ext_resource type="PackedScene" uid="uid://cwsv3xqq3q6q8" path="res://Scene/enemy/enemy.tscn" id="4_qosh5"]
+[ext_resource type="PackedScene" uid="uid://bd8rkx2n5xjk0" path="res://Scene/_Debug/parralax_back_ground_scene.tscn" id="4_t4kkf"]
+
+[node name="MovementScene" type="Node2D"]
+script = ExtResource("1_et1qe")
+
+[node name="DistanceLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(0, 0, 40, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_5rsbw")]
+visibility_layer = 1
+position = Vector2(0, -336)
+
+[node name="Character" parent="." instance=ExtResource("4_o7op6")]
+visibility_layer = 8
+position = Vector2(696, 472)
+
+[node name="ParralaxBackGroundScene" parent="." instance=ExtResource("4_t4kkf")]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 504.0
+offset_bottom = 504.0
+
+[node name="Enemy" parent="." instance=ExtResource("4_qosh5")]
+position = Vector2(360, 485)
+scale = Vector2(4, 4)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
