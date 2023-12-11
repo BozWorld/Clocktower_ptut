@@ -10,16 +10,19 @@
 script = ExtResource("1_et1qe")
 
 [node name="DistanceLine" type="Line2D" parent="."]
+visible = false
 points = PackedVector2Array(0, 0, 40, 0)
 
 [node name="TileMap" parent="." instance=ExtResource("3_5rsbw")]
 visibility_layer = 1
+position = Vector2(0, -336)
 
 [node name="Character" parent="." instance=ExtResource("4_o7op6")]
 visibility_layer = 8
-position = Vector2(696, 832)
+position = Vector2(696, 472)
 
 [node name="ParralaxBackGroundScene" parent="." instance=ExtResource("4_t4kkf")]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -27,5 +30,8 @@ offset_right = 504.0
 offset_bottom = 504.0
 
 [node name="Enemy" parent="." instance=ExtResource("4_qosh5")]
-position = Vector2(312, 845)
+position = Vector2(360, 485)
 scale = Vector2(4, 4)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false

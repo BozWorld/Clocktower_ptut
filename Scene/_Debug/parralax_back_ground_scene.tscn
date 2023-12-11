@@ -6,6 +6,7 @@
 [node name="ParralaxBackGroundScene" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 scale = Vector2(4.5, 3.465)
