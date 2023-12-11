@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cpeduppjocy6y" path="res://Assets/Visuel/raw/img_test_txtbox.png" id="3_2n56c"]
 
 [sub_resource type="FontFile" id="FontFile_43o00"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -136,3 +139,6 @@ jnefoznefonzeofinze
 ozenfoiznefoinzeoifnozienfoiznef"
 label_settings = SubResource("LabelSettings_qatdt")
 autowrap_mode = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 2

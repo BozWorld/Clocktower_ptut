@@ -1,21 +1,32 @@
 extends Area2D
 
 var clickable = false
-signal clicked(knot_name)
-@export var knot_name =""
+var base_size
+signal clicked(object)
+@export var knot_reference =""
+
+#Processing ################################################
+func _ready():
+	base_size=$Sprite2D.scale
+	connect("mouse_entered",_on_hovered)
+	connect("mouse_exited",_stop_hovering)
 
 func _process(delta):
+	_interact_with()
+
+#Methods ################################################
+func _interact_with():
 	if Input.is_action_just_pressed("click")&&clickable==true:
-		clicked.emit(knot_name)
 		print("clicked")
+		clicked.emit(knot_reference)
 
-func _on_mouse_entered():
+#Receivers ################################################
+func _on_hovered():
 	clickable=true
-	$Sprite2D.scale=Vector2(.8,.8)
+	$Sprite2D.scale=base_size*0.8
 
-
-func _on_mouse_exited():
+func _stop_hovering():
 	clickable=false
-	$Sprite2D.scale=Vector2(1,1)
+	$Sprite2D.scale=base_size
 	pass # Replace with function body.
 

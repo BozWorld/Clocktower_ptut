@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Clocktower_ptut"
 config/description="The purpose of the project here is to create a diversion of the Clocktower game inspired by the detournement work of Mary Flanagan and Guy Debord, while also respecting the initial work."
-run/main_scene="res://Scene/Game/Level/main_scene.tscn"
+run/main_scene="res://Scene/Game/Level/test_scene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://assets/sprites/icon.svg"
 
@@ -24,6 +24,7 @@ __InkRuntime="*res://addons/inkgd/runtime/static/ink_runtime.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

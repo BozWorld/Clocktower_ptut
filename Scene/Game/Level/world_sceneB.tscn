@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5iqeejbdxt23"]
+
+[ext_resource type="Script" path="res://Script/testscene_script.gd" id="1_tw6wk"]
+[ext_resource type="PackedScene" uid="uid://drn17pyqts1aq" path="res://Scene/Game/Interactives/npc.tscn" id="1_v580s"]
+[ext_resource type="Texture2D" uid="uid://bosi8qt6026fi" path="res://Assets/Visuel/raw/img_test_world.jpg" id="2_4wft5"]
+[ext_resource type="PackedScene" uid="uid://3y5mj8h3qgnt" path="res://Scene/Game/Interactives/door.tscn" id="4_wcge4"]
+
+[node name="world_sceneB" type="Node2D"]
+position = Vector2(986, 382)
+script = ExtResource("1_tw6wk")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1320, 550)
+render_target_update_mode = 4
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(0.565217, 0.48)
+texture = ExtResource("2_4wft5")
+
+[node name="NPC" parent="." instance=ExtResource("1_v580s")]
+position = Vector2(-162, -44)
+knot_reference = "salut"
+
+[node name="NPC2" parent="." instance=ExtResource("1_v580s")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(35, 103)
+knot_reference = "NPC"
+
+[node name="Door" parent="." instance=ExtResource("4_wcge4")]
+position = Vector2(-456, 4)
+door_reference = "DoorA"
+
+[connection signal="clicked" from="NPC" to="." method="_on_npc_clicked"]
+[connection signal="clicked" from="NPC2" to="." method="_on_npc_clicked"]
