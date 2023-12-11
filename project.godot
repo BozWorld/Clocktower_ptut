@@ -22,8 +22,8 @@ __InkRuntime="*res://addons/inkgd/runtime/static/ink_runtime.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1000
+window/size/viewport_width=900
+window/size/viewport_height=600
 
 [editor_plugins]
 
