@@ -30,12 +30,11 @@ texture = ExtResource("1_3qs2c")
 
 [node name="WorldSceneHandler" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_top = 396.0
-offset_bottom = 396.0
-grow_horizontal = 2
+anchors_preset = 0
+offset_left = 336.0
+offset_top = 100.0
+offset_right = 336.0
+offset_bottom = 100.0
 mouse_filter = 2
 
 [node name="InkManager" parent="." instance=ExtResource("4_ilk6t")]

@@ -22,7 +22,6 @@ visibility_layer = 8
 position = Vector2(696, 472)
 
 [node name="ParralaxBackGroundScene" parent="." instance=ExtResource("4_t4kkf")]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -32,6 +31,7 @@ offset_bottom = 504.0
 [node name="Enemy" parent="." instance=ExtResource("4_qosh5")]
 position = Vector2(360, 485)
 scale = Vector2(4, 4)
+script = null
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
