@@ -6,6 +6,7 @@ extends Control
 var current_scene
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	current_scene = world_sceneA
 	_load_world_scene(current_scene)
 
@@ -18,6 +19,7 @@ func _load_world_scene(scene):
 	for child in $WorldSceneHandler.get_children():
 		child.connect("knot_ready",_set_knot)
 		child.connect("door_to_load",_set_world_scene)
+
 
 func _set_knot(knot):
 	$InkManager._set_path_string(knot)

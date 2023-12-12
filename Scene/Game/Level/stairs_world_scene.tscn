@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ungs83ydefyv"]
+[gd_scene load_steps=6 format=3 uid="uid://ungs83ydefyv"]
 
 [ext_resource type="Texture2D" uid="uid://bosi8qt6026fi" path="res://Assets/Visuel/raw/img_test_world.jpg" id="1_gp00e"]
 [ext_resource type="PackedScene" uid="uid://3y5mj8h3qgnt" path="res://Scene/Game/Interactives/door.tscn" id="2_iuvlp"]
+[ext_resource type="PackedScene" uid="uid://bymku7gsnaix6" path="res://Scene/Game/cursor.tscn" id="2_ktf6i"]
 [ext_resource type="PackedScene" uid="uid://drn17pyqts1aq" path="res://Scene/Game/Interactives/npc.tscn" id="3_ejfou"]
 [ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="4_wj5vc"]
 
@@ -17,6 +18,8 @@ render_target_update_mode = 4
 
 [node name="Character" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_wj5vc")]
 position = Vector2(254, 450)
+
+[node name="cursor" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_ktf6i")]
 
 [node name="background" type="Sprite2D" parent="SubViewportContainer"]
 position = Vector2(614.86, 294)

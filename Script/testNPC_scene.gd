@@ -11,6 +11,7 @@ func _ready():
 	connect("mouse_entered",_on_hovered)
 	connect("mouse_exited",_stop_hovering)
 
+
 func _process(delta):
 	_interact_with()
 

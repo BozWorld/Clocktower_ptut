@@ -8,8 +8,8 @@ signal door_to_load(door)
 # Processing #############################
 func _ready():
 	_connect_children_signals()
-	if $Character != null:
-		$Character.position = $chara_startpos.global_position
+	#if $Character != null:
+		#$Character.position = $chara_startpos.global_position
 
 # Methods #############################
 func _connect_children_signals():
@@ -17,9 +17,12 @@ func _connect_children_signals():
 		if child.is_in_group("interactives"):
 			print("events connected")
 			child.connect("clicked",_on_interactive_clicked)
+			child.connect("mouse_entered",$SubViewportContainer/SubViewport/cursor._hovered)
+			child.connect("mouse_exited",$SubViewportContainer/SubViewport/cursor._not_hovered)
 		elif child.is_in_group(("doors")):
 			print("doors connected")
 			child.connect("door_clicked",_on_door_clicked)
+	
 
 # Receivers #############################
 func _on_interactive_clicked(knot):
