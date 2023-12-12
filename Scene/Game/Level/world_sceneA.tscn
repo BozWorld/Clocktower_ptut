@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkcwv46rfpitv"]
+
+[ext_resource type="Script" path="res://Script/testscene_script.gd" id="1_3kyf0"]
+[ext_resource type="Texture2D" uid="uid://bkoktk7cuy6u4" path="res://Assets/Visuel/raw/icon.svg" id="1_dp1vs"]
+[ext_resource type="Script" path="res://Script/testNPC_scene.gd" id="2_4e76e"]
+[ext_resource type="PackedScene" uid="uid://3y5mj8h3qgnt" path="res://Scene/Game/Interactives/door.tscn" id="4_f54ba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5cmn"]
+size = Vector2(108, 106)
+
+[node name="MainScene" type="Node2D"]
+position = Vector2(382, 242)
+script = ExtResource("1_3kyf0")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = -381.0
+offset_top = -244.0
+offset_right = 619.0
+offset_bottom = 288.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(1000, 532)
+render_target_update_mode = 4
+
+[node name="NPC" type="Area2D" parent="." groups=["interactives"]]
+position = Vector2(-199, -43)
+script = ExtResource("2_4e76e")
+knot_reference = "salut"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+shape = SubResource("RectangleShape2D_e5cmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC"]
+texture = ExtResource("1_dp1vs")
+
+[node name="NPC2" type="Area2D" parent="." groups=["interactives"]]
+position = Vector2(201, 157)
+script = ExtResource("2_4e76e")
+knot_reference = "salut"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
+shape = SubResource("RectangleShape2D_e5cmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC2"]
+texture = ExtResource("1_dp1vs")
+
+[node name="Door" parent="." instance=ExtResource("4_f54ba")]
+door_reference = "DoorB"
+
+[connection signal="clicked" from="NPC" to="." method="_on_npc_clicked"]
+[connection signal="input_event" from="NPC" to="." method="_on_npc_input_event"]
+[connection signal="mouse_entered" from="NPC" to="." method="_on_npc_mouse_entered"]
+[connection signal="mouse_entered" from="NPC" to="NPC" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NPC" to="NPC" method="_on_mouse_exited"]
+[connection signal="clicked" from="NPC2" to="." method="_on_npc_clicked"]
+[connection signal="input_event" from="NPC2" to="." method="_on_npc_input_event"]
+[connection signal="mouse_entered" from="NPC2" to="." method="_on_npc_mouse_entered"]
+[connection signal="mouse_entered" from="NPC2" to="NPC2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NPC2" to="NPC2" method="_on_mouse_exited"]

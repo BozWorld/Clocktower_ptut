@@ -9,11 +9,14 @@ var dir:float = 0
 var clickpos:Vector2 = Vector2.ZERO
 var vb:bool = false
 
+func _ready():
+	position = Vector2(0,0)
+
 func _input(event):
    # Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		vb = true
-		clickpos = get_global_mouse_position()
+		clickpos =  get_global_mouse_position()
 		dir = sign(get_local_mouse_position().x)
 		print("Mouse Click/Unclick at: ", get_local_mouse_position())
 		print("clickpos is :", clickpos)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ungs83ydefyv"]
+
+[ext_resource type="Texture2D" uid="uid://bosi8qt6026fi" path="res://Assets/Visuel/raw/img_test_world.jpg" id="1_gp00e"]
+[ext_resource type="PackedScene" uid="uid://3y5mj8h3qgnt" path="res://Scene/Game/Interactives/door.tscn" id="2_iuvlp"]
+[ext_resource type="PackedScene" uid="uid://drn17pyqts1aq" path="res://Scene/Game/Interactives/npc.tscn" id="3_ejfou"]
+[ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="4_wj5vc"]
+
+[node name="stairs_world_scene" type="Node2D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1224.0
+offset_bottom = 584.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Character" parent="SubViewportContainer/SubViewport" instance=ExtResource("4_wj5vc")]
+position = Vector2(254, 450)
+
+[node name="background" type="Sprite2D" parent="SubViewportContainer"]
+position = Vector2(614.86, 294)
+scale = Vector2(0.496667, 0.496667)
+texture = ExtResource("1_gp00e")
+
+[node name="Door" parent="." instance=ExtResource("2_iuvlp")]
+position = Vector2(1174, 362)
+door_reference = "worldB"
+
+[node name="NPC" parent="." instance=ExtResource("3_ejfou")]
+position = Vector2(658, 408)
+knot_reference = "NPC"
