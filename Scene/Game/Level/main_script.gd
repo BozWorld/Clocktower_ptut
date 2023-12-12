@@ -3,10 +3,11 @@ extends Control
 @export var world_sceneA = preload("res://Scene/Game/Level/world_sceneA.tscn")
 @export var world_sceneB = preload("res://Scene/Game/Level/world_sceneB.tscn")
 @export var stairs_scene = preload("res://Scene/Game/Level/stairs_world_scene.tscn")
+@export var movement_scene = preload("res://Scene/_Debug/movement_scene.tscn")
 var current_scene
 
 func _ready():
-	current_scene = world_sceneA
+	current_scene = movement_scene
 	_load_world_scene(current_scene)
 
 func _load_world_scene(scene):
