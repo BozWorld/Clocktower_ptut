@@ -35,7 +35,7 @@ offset_left = 336.0
 offset_top = 100.0
 offset_right = 336.0
 offset_bottom = 100.0
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="InkManager" parent="." instance=ExtResource("4_ilk6t")]
 layout_mode = 1
