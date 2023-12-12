@@ -19,6 +19,8 @@ cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/31/0 = Vector2(0, 0)
 cache/0/32/0/ascent = 0.0
 cache/0/32/0/descent = 0.0
 cache/0/32/0/underline_position = 0.0
@@ -30,6 +32,8 @@ cache/0/32/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/32/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/31/0 = Vector2(0, 0)
 cache/0/24/0/ascent = 0.0
 cache/0/24/0/descent = 0.0
 cache/0/24/0/underline_position = 0.0
@@ -41,6 +45,8 @@ cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/24/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/24/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/24/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/31/0 = Vector2(0, 0)
 cache/0/46/0/ascent = 0.0
 cache/0/46/0/descent = 0.0
 cache/0/46/0/underline_position = 0.0
@@ -52,6 +58,8 @@ cache/0/46/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/46/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/46/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/46/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/46/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/46/0/kerning_overrides/31/0 = Vector2(0, 0)
 cache/0/34/0/ascent = 0.0
 cache/0/34/0/descent = 0.0
 cache/0/34/0/underline_position = 0.0
@@ -68,6 +76,8 @@ cache/0/34/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/34/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/34/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/34/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/34/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/34/0/kerning_overrides/31/0 = Vector2(0, 0)
 cache/0/28/0/ascent = 0.0
 cache/0/28/0/descent = 0.0
 cache/0/28/0/underline_position = 0.0
@@ -84,11 +94,39 @@ cache/0/28/0/kerning_overrides/24/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/46/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/34/0 = Vector2(0, 0)
 cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/28/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/33/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/46/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/34/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/33/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/31/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/46/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/34/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/28/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/33/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/31/0 = Vector2(0, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qatdt"]
 line_spacing = 24.0
 font = SubResource("FontFile_43o00")
-font_size = 28
+font_size = 31
 
 [node name="InkManager" type="HSplitContainer"]
 anchors_preset = 15
@@ -123,20 +161,21 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 491.0
-offset_bottom = -491.0
+offset_top = 20.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 12
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
 [node name="Label" type="Label" parent="TextBox/MarginContainer"]
 layout_mode = 2
-text = "kjezfozeinfzefeeeeeeeeeeeeeeee
-jnefoznefonzeofinze
-ozenfoiznefoinzeoifnozienfoiznef"
+size_flags_vertical = 0
+text = "zefzef
+zefzefzef
+zefzefzefzefefzef"
 label_settings = SubResource("LabelSettings_qatdt")
 autowrap_mode = 3
 

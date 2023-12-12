@@ -1,12 +1,15 @@
 extends Node2D
 
 @export var knot_to_load =""
+
 signal  knot_ready(knot)
 signal door_to_load(door)
 
 # Processing #############################
 func _ready():
 	_connect_children_signals()
+	if $Character != null:
+		$Character.position = $chara_startpos.global_position
 
 # Methods #############################
 func _connect_children_signals():

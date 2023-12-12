@@ -9,6 +9,7 @@
 size = Vector2(108, 106)
 
 [node name="MainScene" type="Node2D"]
+position = Vector2(382, 242)
 script = ExtResource("1_3kyf0")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]

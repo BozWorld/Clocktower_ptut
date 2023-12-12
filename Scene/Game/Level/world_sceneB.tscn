@@ -7,11 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="5_7iv3k"]
 
 [node name="world_sceneB" type="Node2D"]
-position = Vector2(-5, -5)
+position = Vector2(743, 279)
 script = ExtResource("1_tw6wk")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-custom_minimum_size = Vector2(800, 800)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
@@ -19,7 +18,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(800, 800)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="background" type="Sprite2D" parent="."]
@@ -31,7 +30,8 @@ offset = Vector2(-511.61, -208.05)
 
 [node name="Character" parent="." instance=ExtResource("5_7iv3k")]
 top_level = true
-position = Vector2(494, 159)
+position = Vector2(688, 414)
+scale = Vector2(4.68375, 4.68375)
 
 [node name="NPC" parent="." instance=ExtResource("1_v580s")]
 position = Vector2(-134.83, 1.86401)
@@ -45,6 +45,9 @@ knot_reference = "NPC"
 [node name="Door" parent="." instance=ExtResource("4_wcge4")]
 position = Vector2(-428.83, 49.864)
 door_reference = "DoorA"
+
+[node name="chara_startpos" type="Node2D" parent="."]
+position = Vector2(-323, 164)
 
 [connection signal="clicked" from="NPC" to="." method="_on_npc_clicked"]
 [connection signal="clicked" from="NPC2" to="." method="_on_npc_clicked"]

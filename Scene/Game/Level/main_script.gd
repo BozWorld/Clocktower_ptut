@@ -6,7 +6,7 @@ extends Control
 var current_scene
 
 func _ready():
-	current_scene = stairs_scene
+	current_scene = world_sceneA
 	_load_world_scene(current_scene)
 
 func _load_world_scene(scene):

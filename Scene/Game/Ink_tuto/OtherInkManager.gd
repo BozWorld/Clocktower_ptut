@@ -21,7 +21,7 @@ func _ready():
 	_ink_player.connect("ended", Callable(self, "_ended"))
 
 	_ink_player.create_story()
-	#scale=Vector2(1,0)
+	$TextBox.scale=Vector2(1,0)
 
 func _process(delta):
 	if Input.is_action_just_pressed("click")==true&&can_continue==true:
@@ -35,6 +35,7 @@ func _story_loaded(successfully: bool):
 	# _observe_variables()
 	_bind_externals()
 	can_continue=true
+	_ink_player.choose_path("start")
 	#_ink_player.choose_path("DoorB")
 	#_ink_player.continue_story()
 
@@ -55,10 +56,9 @@ func _set_path_string(name):
 	_ink_player.continue_story()
 
 func _unwrap_text(txt):
-	#if $TextBox/MarginContainer/Label.text == "":
-	#	var t = create_tween()
-	#	t.tween_property(self,"scale",Vector2(1,1),.3)
-	#	await t.finished
+	var t = create_tween()
+	t.tween_property($TextBox,"scale",Vector2(1,1),.3)
+	await t.finished
 	can_continue=false
 	$TextBox/MarginContainer/Label.text=txt
 	$TextBox/MarginContainer/Label.visible_ratio=0
@@ -76,14 +76,11 @@ func _prompt_choices(choices):
 
 func _ended():
 	$TextBox/MarginContainer/Label.text=""
-	#var tween = create_tween()
-	#tween.tween_property(self,"scale",Vector2(1,0),0.3)
 	print("The End")
 
 func _select_choice(index):
 	_ink_player.choose_choice_index(index)
 	_ink_player.continue_story()
-
 
 # Uncomment to bind an external function.	
 func _bind_externals():
