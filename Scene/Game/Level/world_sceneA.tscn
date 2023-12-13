@@ -15,12 +15,19 @@ position = Vector2(382, 242)
 script = ExtResource("1_3kyf0")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = -381.0
-offset_top = -244.0
-offset_right = 619.0
-offset_bottom = 288.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -266.0
+offset_right = 500.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
@@ -28,10 +35,9 @@ physics_object_picking = true
 size = Vector2i(1000, 532)
 render_target_update_mode = 4
 
-[node name="cursor" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_wqx65")]
-position = Vector2(382, 242)
-
 [node name="Character" parent="." instance=ExtResource("6_1jjmf")]
+
+[node name="cursor" parent="." instance=ExtResource("5_wqx65")]
 
 [node name="NPC" type="Area2D" parent="." groups=["interactives"]]
 position = Vector2(-199, -43)
