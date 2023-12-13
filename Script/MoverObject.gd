@@ -9,12 +9,11 @@ var dir:float = 0
 var clickpos:Vector2 = Vector2.ZERO
 var vb:bool = false
 
-
 func _input(event):
    # Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
 		vb = true
-		clickpos = get_global_mouse_position()
+		clickpos =  get_global_mouse_position()
 		dir = sign(get_local_mouse_position().x)
 		print("Mouse Click/Unclick at: ", get_local_mouse_position())
 		print("clickpos is :", clickpos)
@@ -30,18 +29,14 @@ func _process(delta: float) -> void:
 		move(dir,delta)
 		if position.x >= clickpos.x && dir == 1:
 			clamp(position.x,position.x,clickpos.x)
-			animationplayer.play("Interact")
-			animationplayer.queue("idle")
-			#animationplayer.play("idle")
+			animationplayer.play("idle")
 			animationplayer.advance(0)
 			lerp(MAX_SPEED,0.0,1)
 			vb = false
 			return
 		if position.x <= clickpos.x && dir == -1:
 			clamp(position.x,position.x,clickpos.x)
-			animationplayer.play("Interact")
-			animationplayer.queue("idle")
-			#animationplayer.play("idle")
+			animationplayer.play("idle")
 			animationplayer.advance(0)
 			lerp(MAX_SPEED,0.0,1)
 			vb = false

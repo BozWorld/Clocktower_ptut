@@ -10,18 +10,6 @@
 script = ExtResource("1_et1qe")
 light = NodePath("PointLight2D")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = 8.0
-offset_right = 1008.0
-offset_bottom = 532.0
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-handle_input_locally = false
-physics_object_picking = true
-render_target_update_mode = 4
-
 [node name="DistanceLine" type="Line2D" parent="."]
 visible = false
 points = PackedVector2Array(0, 0, 40, 0)
@@ -77,3 +65,15 @@ autoplay = "lampe"
 libraries = {
 "": SubResource("AnimationLibrary_a8ma3")
 }
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 8.0
+offset_right = 1008.0
+offset_bottom = 532.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+physics_object_picking = true
+render_target_update_mode = 4

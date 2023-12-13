@@ -22,6 +22,8 @@ handle_input_locally = false
 size = Vector2i(2, 2)
 render_target_update_mode = 4
 
+[node name="cursor" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_n2cga")]
+
 [node name="background" type="Sprite2D" parent="."]
 visibility_layer = 2
 position = Vector2(254.17, 112.864)
@@ -31,27 +33,24 @@ offset = Vector2(-511.61, -208.05)
 
 [node name="Character" parent="." instance=ExtResource("5_7iv3k")]
 top_level = true
-position = Vector2(677, 536)
-scale = Vector2(9.84577, 9.84577)
+position = Vector2(688, 414)
+scale = Vector2(4.68375, 4.68375)
 
 [node name="NPC" parent="." instance=ExtResource("1_v580s")]
 position = Vector2(-134.83, 1.86401)
-knot_reference = "choices"
+knot_reference = "salut"
 
 [node name="NPC2" parent="." instance=ExtResource("1_v580s")]
 modulate = Color(0, 0, 1, 1)
 position = Vector2(62.17, 148.864)
-knot_reference = "maria"
+knot_reference = "NPC"
 
 [node name="Door" parent="." instance=ExtResource("4_wcge4")]
 position = Vector2(-428.83, 49.864)
-door_reference = "DoorC"
+door_reference = "DoorA"
 
 [node name="chara_startpos" type="Node2D" parent="."]
 position = Vector2(-323, 164)
-
-[node name="cursor" parent="." instance=ExtResource("2_n2cga")]
-position = Vector2(-743, -279)
 
 [connection signal="clicked" from="NPC" to="." method="_on_npc_clicked"]
 [connection signal="clicked" from="NPC2" to="." method="_on_npc_clicked"]

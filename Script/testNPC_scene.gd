@@ -7,7 +7,7 @@ signal clicked(object)
 
 #Processing ################################################
 func _ready():
-	#base_size=$Sprite2D.scale
+	base_size=$Sprite2D.scale
 	connect("mouse_entered",_on_hovered)
 	connect("mouse_exited",_stop_hovering)
 
@@ -24,10 +24,10 @@ func _interact_with():
 #Receivers ################################################
 func _on_hovered():
 	clickable=true
-	#$Sprite2D.scale=base_size*0.8
+	$Sprite2D.scale=base_size*0.8
 
 func _stop_hovering():
 	clickable=false
-	#$Sprite2D.scale=base_size
+	$Sprite2D.scale=base_size
 	pass # Replace with function body.
 

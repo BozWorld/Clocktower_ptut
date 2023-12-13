@@ -23,28 +23,26 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -15.0
-offset_right = 19.0
-offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_3qs2c")
 
-[node name="InkManager" parent="." instance=ExtResource("4_ilk6t")]
-layout_mode = 2
+[node name="WorldSceneHandler" type="Control" parent="."]
+layout_mode = 1
 anchors_preset = 0
+offset_left = 336.0
+offset_top = 100.0
+offset_right = 336.0
+offset_bottom = 100.0
+mouse_filter = 1
+
+[node name="InkManager" parent="." instance=ExtResource("4_ilk6t")]
+layout_mode = 1
+anchors_preset = 12
 anchor_top = 1.0
 offset_left = 411.0
 offset_top = -364.0
 offset_right = -411.0
 offset_bottom = -131.0
 grow_vertical = 0
-
-[node name="WorldSceneHandler" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 0
-offset_top = 106.0
-offset_bottom = 106.0
-mouse_filter = 1
