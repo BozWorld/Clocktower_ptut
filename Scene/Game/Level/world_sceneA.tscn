@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkcwv46rfpitv"]
+[gd_scene load_steps=8 format=3 uid="uid://bkcwv46rfpitv"]
 
 [ext_resource type="Script" path="res://Script/testscene_script.gd" id="1_3kyf0"]
 [ext_resource type="Texture2D" uid="uid://bkoktk7cuy6u4" path="res://Assets/Visuel/raw/icon.svg" id="1_dp1vs"]
 [ext_resource type="Script" path="res://Script/testNPC_scene.gd" id="2_4e76e"]
 [ext_resource type="PackedScene" uid="uid://3y5mj8h3qgnt" path="res://Scene/Game/Interactives/door.tscn" id="4_f54ba"]
+[ext_resource type="PackedScene" uid="uid://bymku7gsnaix6" path="res://Scene/Game/cursor.tscn" id="5_wqx65"]
+[ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="6_1jjmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5cmn"]
 size = Vector2(108, 106)
@@ -13,18 +15,29 @@ position = Vector2(382, 242)
 script = ExtResource("1_3kyf0")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = -381.0
-offset_top = -244.0
-offset_right = 619.0
-offset_bottom = 288.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -266.0
+offset_right = 500.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-metadata/_edit_use_anchors_ = true
+stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
 physics_object_picking = true
 size = Vector2i(1000, 532)
 render_target_update_mode = 4
+
+[node name="Character" parent="." instance=ExtResource("6_1jjmf")]
+
+[node name="cursor" parent="." instance=ExtResource("5_wqx65")]
 
 [node name="NPC" type="Area2D" parent="." groups=["interactives"]]
 position = Vector2(-199, -43)

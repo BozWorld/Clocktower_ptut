@@ -10,6 +10,34 @@
 script = ExtResource("1_et1qe")
 light = NodePath("PointLight2D")
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 8.0
+offset_right = 1008.0
+offset_bottom = 532.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+physics_object_picking = true
+render_target_update_mode = 4
+
+[node name="DistanceLine" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(0, 0, 40, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("3_5rsbw")]
+visible = false
+visibility_layer = 1
+position = Vector2(0, -336)
+
+[node name="ParralaxBackGroundScene" parent="." instance=ExtResource("4_t4kkf")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 504.0
+offset_bottom = 504.0
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.501961, 0.0745098, 0.188235, 1)
 
@@ -43,3 +71,9 @@ texture_scale = 0.01
 [node name="Enemy" parent="." instance=ExtResource("5_2c7ml")]
 position = Vector2(384, 880)
 scale = Vector2(1.4, 1.4)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../PointLight2D")
+autoplay = "lampe"
+libraries = {
+"": SubResource("AnimationLibrary_a8ma3")
+}
