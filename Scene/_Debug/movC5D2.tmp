@@ -43,3 +43,4 @@ texture_scale = 0.01
 [node name="Enemy" parent="." instance=ExtResource("5_2c7ml")]
 position = Vector2(384, 880)
 scale = Vector2(1.4, 1.4)
+playerpos = 0.0

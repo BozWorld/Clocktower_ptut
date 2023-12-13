@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b41tt4it4bla7"
-path="res://.godot/imported/Character Idle 48x48.png-fdd89ed4a1ba6f90265369dfa9e46b42.ctex"
+uid="uid://dda8oplraxcj0"
+path="res://.godot/imported/monstre-spritesheet.png-b66168301df630e38224c5b31dd6d5fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuel/raw/Character Idle 48x48.png"
-dest_files=["res://.godot/imported/Character Idle 48x48.png-fdd89ed4a1ba6f90265369dfa9e46b42.ctex"]
+source_file="res://Scene/enemy/monstre-spritesheet.png"
+dest_files=["res://.godot/imported/monstre-spritesheet.png-b66168301df630e38224c5b31dd6d5fb.ctex"]
 
 [params]
 

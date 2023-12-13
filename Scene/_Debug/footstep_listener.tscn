@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuoncyfw7y6cu"]
+
+[ext_resource type="AudioStream" uid="uid://jr3qje7a7bsa" path="res://Assets/Audio/raw/footstep_1.wav" id="1_cq44e"]
+[ext_resource type="Script" path="res://Scene/_Debug/Randomizer_Audio.gd" id="2_i0wa8"]
+
+[node name="footstep_listener" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_cq44e")
+script = ExtResource("2_i0wa8")
