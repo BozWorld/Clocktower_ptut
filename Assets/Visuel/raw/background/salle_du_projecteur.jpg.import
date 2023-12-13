@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddyivkl51ytgs"
-path="res://.godot/imported/background.png-065e074394cb30e74e876f8eb80cb5fd.ctex"
+uid="uid://md1d4hqtvsed"
+path="res://.godot/imported/salle_du_projecteur.jpg-587953dda431b2466ea464f3fc3a8704.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Visuel/raw/Parallax/background.png"
-dest_files=["res://.godot/imported/background.png-065e074394cb30e74e876f8eb80cb5fd.ctex"]
+source_file="res://Assets/Visuel/raw/background/salle_du_projecteur.jpg"
+dest_files=["res://.godot/imported/salle_du_projecteur.jpg-587953dda431b2466ea464f3fc3a8704.ctex"]
 
 [params]
 

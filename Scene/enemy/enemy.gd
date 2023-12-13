@@ -3,9 +3,14 @@ extends Area2D
 @export var playerpos: float = 0
 @export var animationplayer:AnimationPlayer
 @onready var sprite:Sprite2D = $Sprite2D
-var MAX_SPEED = 150
+var MAX_SPEED = 80
+@export var light:PointLight2D = null
 
 func _process(delta: float) -> void:
+	var tw = get_tree().create_tween()
+	tw.tween_property(light, "texture_scale", 3, 2)
+	var twsize = get_tree().create_tween()
+	twsize.tween_property(light, "energy", 4, 2)
 	moveTo(Vector2(playerpos,0) ,delta)
 
 func receive_pos(value):
@@ -14,6 +19,8 @@ func receive_pos(value):
 func moveTo(v1:Vector2,delta:float):
 	var dir = (v1 - position).normalized()
 	var dirsign = sign(dir)
+	print(dir)
+	print(dirsign)
 	position.x += delta * dirsign.x * MAX_SPEED
 	if dirsign.x <0:
 		sprite.flip_h = true
