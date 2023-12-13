@@ -414,7 +414,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4uatk"]
-size = Vector2(221, 315)
+size = Vector2(167, 315)
 
 [node name="Character" type="CharacterBody2D"]
 collision_mask = 8
@@ -444,7 +444,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
-position = Vector2(0, 0.5)
+position = Vector2(-1.5, 0.5)
 shape = SubResource("RectangleShape2D_4uatk")
 debug_color = Color(0.976471, 0, 0.423529, 0.419608)
 

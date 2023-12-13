@@ -23,3 +23,12 @@ func _on_quitter_pressed() -> void:
 func _on_commencer_pressed() -> void:
 	animator.play("main_menu")
 	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	animator.play("main_menu")
+
+
+func _on_controle_pressed() -> void:
+	animator.play("credit")
+	pass # Replace with function body.

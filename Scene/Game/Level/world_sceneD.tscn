@@ -32,8 +32,8 @@ offset = Vector2(-511.61, -208.05)
 
 [node name="Character" parent="." instance=ExtResource("3_6su3m")]
 top_level = true
-position = Vector2(616, 465)
-scale = Vector2(8.84596, 8.84596)
+position = Vector2(391, 322)
+scale = Vector2(0.5, 0.5)
 
 [node name="NPC" parent="." instance=ExtResource("4_xwoet")]
 position = Vector2(394, 11)
