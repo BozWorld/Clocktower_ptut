@@ -14,4 +14,4 @@ stream_1/weight = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = SubResource("AudioStreamRandomizer_pb2m2")
-pitch_scale = 0.01
+pitch_scale = 0.1
