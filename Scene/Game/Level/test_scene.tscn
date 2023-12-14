@@ -45,6 +45,8 @@ grow_vertical = 0
 [node name="WorldSceneHandler" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
+offset_left = 100.0
 offset_top = 106.0
+offset_right = 100.0
 offset_bottom = 106.0
 mouse_filter = 1

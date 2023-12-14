@@ -9,7 +9,8 @@ var dir:float = 0
 var clickpos:Vector2 = Vector2.ZERO
 var vb:bool = false
 
-
+func _ready():
+	clickpos = position
 func _input(event):
    # Mouse in viewport coordinates.
 	if event is InputEventMouseButton:

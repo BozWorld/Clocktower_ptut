@@ -45,9 +45,9 @@ func _story_loaded(successfully: bool):
 	# _observe_variables()
 	_bind_externals()
 	can_continue=true
-	#_ink_player.choose_path("start")
+	_ink_player.choose_path("maria")
 	#_ink_player.choose_path("DoorB")
-	#_ink_player.continue_story()
+	_ink_player.continue_story()
 
 
 func _continued(text, tags):

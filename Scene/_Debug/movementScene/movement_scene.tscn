@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Script/debug/handle_scene/movement_scene.gd" id="1_dmigb"]
 [ext_resource type="Texture2D" uid="uid://md1d4hqtvsed" path="res://Assets/Visuel/raw/background/salle_du_projecteur.jpg" id="2_4rf2i"]
 [ext_resource type="PackedScene" uid="uid://da4hvshmdeaxd" path="res://Scene/_Debug/character.tscn" id="3_id4q3"]
-[ext_resource type="Texture2D" uid="uid://84xmdxmgy8mp" path="res://Assets/Visuel/raw/2d_lights_and_shadows_neutral_point_light.png" id="4_cimgq"]
+[ext_resource type="Texture2D" uid="uid://84xmdxmgy8mp" path="res://Assets/Visuel/raw/light/2d_lights_and_shadows_neutral_point_light.png" id="4_cimgq"]
 [ext_resource type="PackedScene" uid="uid://cwsv3xqq3q6q8" path="res://Scene/enemy/enemy.tscn" id="5_a7a3r"]
 
 [node name="MovementScene" type="Node2D" node_paths=PackedStringArray("light")]

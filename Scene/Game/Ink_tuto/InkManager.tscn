@@ -173,9 +173,6 @@ theme_override_constants/margin_bottom = 24
 [node name="Label" type="Label" parent="TextBox/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "zefzef
-zefzefzef
-zefzefzefzefefzef"
 label_settings = SubResource("LabelSettings_qatdt")
 autowrap_mode = 3
 

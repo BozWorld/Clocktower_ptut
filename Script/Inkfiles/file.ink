@@ -30,24 +30,26 @@ idle_la porte a l'air fermée de l'autre coté...
 maria_{!coucou c moi Maria|tu veux quoi|oh oh|repond sale batar|pffff...}
 ->DONE
 
-===phone===
-{stopping:
--idle_yo yo yo yo 
-phone_ouais ouais 
-idle_...
-phone_big up ou quoi
-angry_je je j-
-phone_ouais ouais ouais
-cry_...
-
--zreifubzeufbzerg
-zriehgbierubgieurbg
-
--erziieruieurbg
-eorgnoeirngoier
-}
+===phoneA===
+phone_Alors ? J'imagine que ta grand-mère ne t'a rien appris de plus.
+phone_Je te l'avais pourtant déjà expliqué.
+angry_Tu m'expliques le coup bas d'hier ?!
++[Et puis c'est quoi cette chose qui m'a poursuivi ?!]
++[Je pensais que je pouvais te faire confiance]
+-
+phone_Ah ça... Tu me semblais confuse alors je me suis dis que je pourrai peut-être te donner un coup de pouce.
+worry_Je dois me dépêcher si je ne veux pas me retrouver à nouveau nez à nez avec ce monstre !
+phone_N'oublie pas que nous devons travailler ensemble.
+phone_Surtout après le fiasco d'hier...
++[Ce monstre, il doit bien avoir une faiblesse...]
++["Je" serai celle qui découvrira ce qui se passe ici !]
+-
+focus_Allons-y !
 ->DONE
-
+===papi===
+worry_(Grand-père... Comment est-ce possible ..?)
+focus_(Non je n'ai pas pu rêver. Je dois en parler avec grand-mère !)
+->DONE
 ===maria===
 {stopping:
 -maria_Hmm...
@@ -72,7 +74,7 @@ focus_Mamie ?
 ->DONE
 
 ===maria_negative===
-maria_Je savais qu'il reviendrait..! Je n'ai pas rêvé quand je l'ai vu rôdé dans les couloirs...
+maria_Je savais qu'il reviendrait..! Je n'ai pas rêvé quand je l'ai vu rôder dans les couloirs...
 worry_Mamie..?
 maria_C'en est fini des Di Santi, nous sommes damnés !
 focus_(Mamie n'a pas l'air de m'écouter, je ferai peut-être mieux de la laisser se reposer un peu...)
@@ -86,40 +88,3 @@ worry_Oh Mamie...
 focus_Je comprends mieux, merci Mamie ! (dans le mille.)
 ->DONE
 
-/*
-VAR photo_chambre_maria = false
-idle, angry, sad, worry, focus
-
-===vieille_pendule===
-contrariee_Comment fait mamie pour dormir avec le bruit qu'elle fait? Elle me fait tout le temps sursauter.
-->DONE
-
-===armoire===
-idle_Une fois j'ai fait un cache-cache avec mamie et Andréa, on s'était cachés dans l'armoire et on est restés bloqués dedans. C'est finalement tonton qui nous a fait sortir en nous promettant une surprise. Depuis elle est fermée à clé.
-->DONE
-
-===maria===
-
-//choix
-Tu as besoin de quelque chose ma chérie? 
-+{photo_chambre_maria}[Regarde ce que j'ai retrouvé!}->mariapositive
-+{not photo_chambre_maria}[Hier j'ai vu quelque chose dans les couloirs...]->marianegative
-
-==mariapositive==
-maria_happy Ah oui je m'en souviens, tu avais l'air si penaude que ton papy cachait discrètement ses poissons dans ton seau pour te faire plaisir. Ton sourire était si radieux ce jour là... 
-idle_ Oh, ça explique des choses! (dans le mille.)
-->DONE
-
-==marianegative==
-maria_sad Je savais qu'il reviendrait...! Je n'avais pas rêvé quand je l'avais vu rôder dans les couloirs ... 
-tritesse_ Mamie? 
-maria_sad C'en est fini des di Santi, nous sommes damnés! 
-idle_ (Mamie n'a pas l'air de m'écouter, je ferai peut être mieux de la laisser se reposer un peu...)
-->DONE
-
-// set variable
-===photo_chambre_maria===
-idle_C'est une photo de papy et moi à la pêche, j'avais attrapé le plus de poissons mais je suis sûre qu'il avait fait exprès de me laisser gagner. 
-->DONE
-~photo_chambre_maria=true
-*/

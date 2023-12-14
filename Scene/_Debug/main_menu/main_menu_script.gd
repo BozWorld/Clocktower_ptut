@@ -1,5 +1,5 @@
 extends Control
-
+var main = preload("res://Scene/Game/Level/test_scene.tscn")
 @export var bt_jouer:Button
 @export var bt_controle:Button
 @export var bt_credits:Button
@@ -31,4 +31,9 @@ func _on_button_pressed() -> void:
 
 func _on_controle_pressed() -> void:
 	animator.play("credit")
+	pass # Replace with function body.
+
+
+func _on_jouer_pressed():
+	get_tree().change_scene_to_file("res://Scene/Game/Level/test_scene.tscn")
 	pass # Replace with function body.
